@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
+import { AnimatePresence, motion } from "motion/react";
 import Container from "../Container/Container";
 import styles from "./Header.module.scss";
 
@@ -19,12 +19,12 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
-            <Container className={styles.container} aria-label="Main navigation">
+            <Container className={styles.container}>
                 <Link href="/" className={styles.logo} onClick={closeMenu}>
                     RIDELINE<span>.</span>
                 </Link>
 
-                <nav className={styles.navigation}>
+                <nav className={styles.navigation} aria-label="Main navigation">
                     {navigation.map((item) => (
                         <Link key={item.href} href={item.href}>
                             {item.label}
@@ -50,30 +50,39 @@ export default function Header() {
                     </button>
                 </div>
             </Container>
+            <AnimatePresence initial={false}>
+                {isMenuOpen && (
+                    <motion.nav
+                        id="mobile-navigation"
+                        className={styles.mobileNavigation}
+                        aria-label="Mobile navigation"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{
+                            height: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+                            opacity: { duration: 0.2 },
+                        }}
+                    >
+                        <Container className={styles.mobileContainer}>
+                            {navigation.map((item) => (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    onClick={closeMenu}
+                                    className={styles.mobileLink}
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
 
-            {isMenuOpen && (
-                <nav
-                    id="mobile-navigation"
-                    className={styles.mobileNavigation}
-                    aria-label="Mobile navigation"
-                >
-                    <Container className={styles.mobileContainer}>
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                onClick={closeMenu}
-                            >
-                                {item.label}
+                            <Link className={styles.mobileLink} href="/saved" onClick={closeMenu}>
+                                Saved
                             </Link>
-                        ))}
-
-                        <Link href="/saved" onClick={closeMenu}>
-                            Saved
-                        </Link>
-                    </Container>
-                </nav>
-            )}
+                        </Container>
+                    </motion.nav>
+                )}
+            </AnimatePresence>
         </header>
     );
 }
