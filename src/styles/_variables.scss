@@ -1,0 +1,30 @@
+:root {
+    // Colors
+    --color-bg: #111310;
+    --color-surface: #1a1d18;
+    --color-surface-light: #242820;
+
+    --color-text: #f2f2ed;
+    --color-text-muted: #92968b;
+
+    --color-accent: #c5f467;
+    --color-border: rgba(255, 255, 255, 0.12);
+
+    // Typography
+    --font-body: var(--font-inter);
+    --font-display: var(--font-barlow);
+
+    // Layout
+    --container-width: 1440px;
+    --container-padding: 40px;
+
+    // Spacing
+    --section-spacing: 120px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 20px;
+        --section-spacing: 80px;
+    }
+}
