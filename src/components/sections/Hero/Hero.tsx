@@ -22,14 +22,13 @@ export default function Hero() {
                 </span>
 
                 <h1 className={styles.title}>
-                    За
+                    ИЩИ СВОЙ
                     <br />
-                    пределами тропы<span>.</span>
+                    ПУТЬ<span>.</span>
                 </h1>
 
                 <p className={styles.description}>
-                    Истории, маршруты и экипировка для тех,
-                    кто живёт скоростью и свободой.
+                    Горы, трейлы, экипировка и всё, что делает каждую поездку особенной.
                 </p>
 
                 <a href="/rides" className={styles.link}>
