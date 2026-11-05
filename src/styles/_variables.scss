@@ -12,7 +12,7 @@
 
     // Typography
     --font-body: var(--font-inter);
-    --font-display: var(--font-barlow);
+    --font-display: var(--font-barlow), var(--font-inter), sans-serif;
 
     // Layout
     --container-width: 1440px;

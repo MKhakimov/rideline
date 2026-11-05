@@ -3,7 +3,7 @@ import "./globals.scss";
 import { Inter, Barlow_Condensed } from "next/font/google";
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -17,11 +17,11 @@ const barlow = Barlow_Condensed({
 
 export const metadata: Metadata = {
     title: {
-        default: "RIDELINE — Mountain Bike Culture",
+        default: "RIDELINE — культура горного велосипеда",
         template: "%s | RIDELINE",
     },
     description:
-        "Mountain biking, trails, gear and stories. Explore the world of MTB with RIDELINE.",
+        "Маунтинбайк, горные маршруты, экипировка и истории. Откройте мир горного велосипеда вместе с RIDELINE.",
 };
 
 export const viewport: Viewport = {
@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
     return (
         <html 
-            lang="en"
+            lang="ru"
             className={`${inter.variable} ${barlow.variable}`}
         >
             <body>{children}</body>

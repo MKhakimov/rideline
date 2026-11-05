@@ -7,9 +7,9 @@ import Container from "../Container/Container";
 import styles from "./Header.module.scss";
 
 const navigation = [
-    { label: "Rides", href: "/rides" },
-    { label: "Gear", href: "/gear" },
-    { label: "Journal", href: "/journal" },
+    { label: "Маршруты", href: "/rides" },
+    { label: "Экипировка", href: "/gear" },
+    { label: "Журнал", href: "/journal" },
 ];
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
                     RIDELINE<span>.</span>
                 </Link>
 
-                <nav className={styles.navigation} aria-label="Main navigation">
+                <nav className={styles.navigation} aria-label="Основная навигация">
                     {navigation.map((item) => (
                         <Link key={item.href} href={item.href}>
                             {item.label}
@@ -34,13 +34,13 @@ export default function Header() {
 
                 <div className={styles.actions}>
                     <Link href="/saved" className={styles.saved}>
-                        Saved
+                        Избранное
                     </Link>
 
                     <button
                         type="button"
                         className={styles.menuButton}
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                        aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
                         aria-expanded={isMenuOpen}
                         aria-controls="mobile-navigation"
                         onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -55,7 +55,7 @@ export default function Header() {
                     <motion.nav
                         id="mobile-navigation"
                         className={styles.mobileNavigation}
-                        aria-label="Mobile navigation"
+                        aria-label="Мобильная навигация"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -77,7 +77,7 @@ export default function Header() {
                             ))}
 
                             <Link className={styles.mobileLink} href="/saved" onClick={closeMenu}>
-                                Saved
+                                Избранное
                             </Link>
                         </Container>
                     </motion.nav>

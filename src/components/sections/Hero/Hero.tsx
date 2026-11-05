@@ -7,7 +7,7 @@ export default function Hero() {
         <section className={styles.hero}>
             <Image
                 src="/images/hero.png"
-                alt="Mountain biker riding through a mountain trail"
+                alt="Маунтинбайкер едет по горной тропе"
                 fill
                 priority
                 sizes="100vw"
@@ -18,22 +18,22 @@ export default function Hero() {
 
             <Container className={styles.content}>
                 <span className={styles.eyebrow}>
-                    Mountain Bike Culture
+                    Культура горного велосипеда
                 </span>
 
                 <h1 className={styles.title}>
-                    Beyond
+                    За
                     <br />
-                    The Trail<span>.</span>
+                    пределами тропы<span>.</span>
                 </h1>
 
                 <p className={styles.description}>
-                    Stories, rides and gear for those who live
-                    for the ride.
+                    Истории, маршруты и экипировка для тех,
+                    кто живёт скоростью и свободой.
                 </p>
 
                 <a href="/rides" className={styles.link}>
-                    Explore rides <span>↗</span>
+                    Смотреть маршруты <span>↗</span>
                 </a>
             </Container>
         </section>
