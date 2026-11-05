@@ -7,9 +7,12 @@ import Container from "../Container/Container";
 import styles from "./Header.module.scss";
 
 const navigation = [
-    { label: "Маршруты", href: "/rides" },
+    { label: "Поездки", href: "/rides" },
+    { label: "Маршруты", href: "/routes" },
     { label: "Экипировка", href: "/gear" },
+    { label: "Мастерская", href: "/workshop" },
     { label: "Журнал", href: "/journal" },
+    { label: "Сообщество", href: "/community" },
 ];
 
 export default function Header() {
@@ -33,6 +36,16 @@ export default function Header() {
                 </nav>
 
                 <div className={styles.actions}>
+                    <div
+                        className={styles.languageToggle}
+                        role="group"
+                        aria-label="Выбор языка, пока недоступен"
+                        aria-disabled="true"
+                    >
+                        <span className={styles.languageActive}>RU</span>
+                        <span>EN</span>
+                    </div>
+
                     <Link href="/saved" className={styles.saved}>
                         Избранное
                     </Link>
