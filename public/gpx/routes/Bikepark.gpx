@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="Maps 3D" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<trk>
+<name>Bikepark</name>
+<extensions>
+<Maps3D:TrackExtensions xmlns:Maps3D="http://www.movingworld.de/xmlschemas/GpxExtensions/v1">
+<Maps3D:RealSpeed>14.220154</Maps3D:RealSpeed>
+<Maps3D:RealSecondsSpent>321</Maps3D:RealSecondsSpent>
+</Maps3D:TrackExtensions>
+</extensions>
+<trkseg>
+<trkpt lat="41.521915" lon="70.029388">
+   <ele>1939.440308</ele>
+   <time>2018-06-23T08:37:07Z</time>
+</trkpt>
+<trkpt lat="41.522604" lon="70.029188">
+   <ele>1921.178955</ele>
+   <time>2018-06-23T08:37:22Z</time>
+</trkpt>
+<trkpt lat="41.523955" lon="70.028819">
+   <ele>1884.768066</ele>
+   <time>2018-06-23T08:37:38Z</time>
+</trkpt>
+<trkpt lat="41.524769" lon="70.029221">
+   <ele>1875.207520</ele>
+   <time>2018-06-23T08:37:54Z</time>
+</trkpt>
+<trkpt lat="41.524715" lon="70.029506">
+   <ele>1868.142944</ele>
+   <time>2018-06-23T08:38:09Z</time>
+</trkpt>
+<trkpt lat="41.525424" lon="70.029913">
+   <ele>1846.616089</ele>
+   <time>2018-06-23T08:38:25Z</time>
+</trkpt>
+<trkpt lat="41.525701" lon="70.029936">
+   <ele>1838.675293</ele>
+   <time>2018-06-23T08:38:45Z</time>
+</trkpt>
+<trkpt lat="41.525921" lon="70.030245">
+   <ele>1824.471191</ele>
+   <time>2018-06-23T08:39:01Z</time>
+</trkpt>
+<trkpt lat="41.526031" lon="70.030114">
+   <ele>1822.311768</ele>
+   <time>2018-06-23T08:39:25Z</time>
+</trkpt>
+<trkpt lat="41.526319" lon="70.029066">
+   <ele>1803.842529</ele>
+   <time>2018-06-23T08:39:40Z</time>
+</trkpt>
+<trkpt lat="41.526038" lon="70.028128">
+   <ele>1795.141846</ele>
+   <time>2018-06-23T08:39:55Z</time>
+</trkpt>
+<trkpt lat="41.525810" lon="70.027119">
+   <ele>1768.312378</ele>
+   <time>2018-06-23T08:40:11Z</time>
+</trkpt>
+<trkpt lat="41.525277" lon="70.026333">
+   <ele>1759.877930</ele>
+   <time>2018-06-23T08:40:27Z</time>
+</trkpt>
+<trkpt lat="41.525325" lon="70.025728">
+   <ele>1738.289795</ele>
+   <time>2018-06-23T08:40:42Z</time>
+</trkpt>
+<trkpt lat="41.525725" lon="70.025595">
+   <ele>1724.245117</ele>
+   <time>2018-06-23T08:40:57Z</time>
+</trkpt>
+<trkpt lat="41.525553" lon="70.024616">
+   <ele>1704.841919</ele>
+   <time>2018-06-23T08:41:13Z</time>
+</trkpt>
+<trkpt lat="41.525713" lon="70.024025">
+   <ele>1689.579224</ele>
+   <time>2018-06-23T08:41:29Z</time>
+</trkpt>
+<trkpt lat="41.525571" lon="70.022981">
+   <ele>1674.606934</ele>
+   <time>2018-06-23T08:41:45Z</time>
+</trkpt>
+<trkpt lat="41.525638" lon="70.022411">
+   <ele>1665.988037</ele>
+   <time>2018-06-23T08:42:00Z</time>
+</trkpt>
+</trkseg></trk></gpx>
