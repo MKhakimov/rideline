@@ -1,4 +1,8 @@
 .card {
+    min-width: 0;
+}
+
+.contentLink {
     display: flex;
     flex-direction: column;
     color: var(--color-text);
@@ -12,8 +16,7 @@
     background: var(--color-surface);
 }
 
-.image {
-    object-fit: cover;
+.imageFrame > * {
     transition: transform 0.35s ease;
 }
 
@@ -38,13 +41,18 @@
     font-size: 13px;
 }
 
+.action {
+    align-self: flex-start;
+    margin-top: 12px;
+}
+
 .detail + .detail::before {
     content: "·";
     margin-right: 12px;
     color: var(--color-text-muted);
 }
 
-.card:hover .image {
+.card:hover .imageFrame > * {
     transform: scale(1.04);
 }
 

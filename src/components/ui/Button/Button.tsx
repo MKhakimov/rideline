@@ -12,12 +12,14 @@ type ButtonBaseProps = {
 
 type ButtonLinkProps = ButtonBaseProps & {
     href: string;
+    download?: string | boolean;
     type?: never;
     disabled?: never;
 };
 
 type NativeButtonProps = ButtonBaseProps & {
     href?: never;
+    download?: never;
     type?: "button" | "submit" | "reset";
     disabled?: boolean;
 };
@@ -52,7 +54,7 @@ export default function Button(props: ButtonProps) {
 
     if (props.href !== undefined) {
         return (
-            <Link href={props.href} className={classNames}>
+            <Link href={props.href} className={classNames} download={props.download}>
                 {children}
                 {showArrow && <ArrowIcon />}
             </Link>

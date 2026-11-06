@@ -1,35 +1,34 @@
-import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
+import Button from "@/components/ui/Button/Button";
 import styles from "./ContentCard.module.scss";
 
 export type ContentCardProps = {
-    href: string;
-    image: string;
-    imageAlt: string;
+    href?: string;
+    media: ReactNode;
     title: string;
     details: string[];
+    action?: {
+        href: string;
+        label: string;
+        download?: string | boolean;
+    };
 };
 
 export default function ContentCard({
     href,
-    image,
-    imageAlt,
+    media,
     title,
     details,
+    action,
 }: ContentCardProps) {
-    return (
-        <Link href={href} className={styles.card}>
+    const content = (
+        <>
             <span className={styles.imageFrame}>
-                <Image
-                    src={image}
-                    alt={imageAlt}
-                    fill
-                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                    className={styles.image}
-                />
+                {media}
             </span>
 
-            <h3 className={styles.title}>{title}</h3>
+            <span className={styles.title}>{title}</span>
 
             <span className={styles.details}>
                 {details.map((detail, index) => (
@@ -38,6 +37,30 @@ export default function ContentCard({
                     </span>
                 ))}
             </span>
-        </Link>
+        </>
+    );
+
+    return (
+        <div className={styles.card}>
+            {href ? (
+                <Link href={href} className={styles.contentLink}>
+                    {content}
+                </Link>
+            ) : (
+                <div className={styles.contentLink}>{content}</div>
+            )}
+
+            {action && (
+                <Button
+                    href={action.href}
+                    download={action.download}
+                    variant="link"
+                    size="sm"
+                    className={styles.action}
+                >
+                    {action.label}
+                </Button>
+            )}
+        </div>
     );
 }

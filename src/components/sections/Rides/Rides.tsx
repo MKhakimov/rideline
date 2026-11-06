@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/layout/Container/Container";
 import ContentCard from "@/components/cards/ContentCard/ContentCard";
 import Button from "@/components/ui/Button/Button";
@@ -13,8 +14,20 @@ export default function Rides() {
                 </h2>
 
                 <div className={styles.grid}>
-                    {rides.map((ride) => (
-                        <ContentCard key={ride.href} {...ride} />
+                    {rides.map(({ image, imageAlt, ...ride }) => (
+                        <ContentCard
+                            key={ride.href}
+                            {...ride}
+                            media={
+                                <Image
+                                    src={image}
+                                    alt={imageAlt}
+                                    fill
+                                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                                    className={styles.image}
+                                />
+                            }
+                        />
                     ))}
                 </div>
                 

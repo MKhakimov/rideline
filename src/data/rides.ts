@@ -1,7 +1,13 @@
-import type { ContentCardProps } from "@/components/cards/ContentCard/ContentCard";
+type Ride = {
+    href: string;
+    image: string;
+    imageAlt: string;
+    title: string;
+    details: string[];
+};
 
 // Временные записи для макета, до добавления реальных поездок.
-export const rides = [
+export const rides: Ride[] = [
     {
         href: "/rides/above-the-valley",
         image: "/images/rides/alpine-ride.png",
@@ -44,4 +50,4 @@ export const rides = [
         title: "Последний спуск дня",
         details: ["Чимбулак", "16 августа 2026"],
     },
-] satisfies ContentCardProps[];
+];
