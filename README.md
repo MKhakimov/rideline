@@ -1,30 +1,11 @@
 # RIDELINE
+A mountain bike culture website built with Next.js App Router.
 
-Сайт о культуре горного велосипеда на Next.js с App Router.
+## Project Structure
+- `src/app` — application pages, root layout, and global styles.
+- `src/components/layout` — layout components, including the header and container.
+- `src/components/sections` — page sections.
+- `src/styles` — variables, mixins, and reset styles.
 
-## Запуск проекта
-
-Установите зависимости и запустите сервер разработки:
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Откройте [http://localhost:3000](http://localhost:3000), чтобы посмотреть сайт.
-
-## Структура
-
-- `src/app` — страницы приложения, корневой макет и глобальные стили.
-- `src/components/layout` — компоненты разметки, включая шапку сайта и контейнер.
-- `src/components/sections` — секции страниц, включая главный экран.
-- `src/styles` — переменные, миксины и сброс стилей.
-
-Стили компонентов находятся в SCSS Modules. Для новых компонентов используйте серверные компоненты по умолчанию, а клиентские — только когда нужна интерактивность.
-
-## Сборка
-
-```bash
-pnpm build
-pnpm start
-```
+## Routes
+Add `.gpx` files to `public/gpx/routes`. Titles and dates are read from GPX metadata; distance and SVG previews are generated automatically. The homepage shows the six newest routes by GPX date. Rebuild and redeploy to publish additions.
