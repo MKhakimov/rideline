@@ -68,10 +68,6 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
 
-    span {
-        color: var(--color-accent);
-    }
-
     @include mobile {
         font-size: clamp(64px, 17vw, 100px);
     }
@@ -94,7 +90,7 @@
 .link {
     display: inline-flex;
     align-items: center;
-    gap: 24px;
+    gap: .6rem;
     margin-top: 36px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--color-accent);
@@ -103,8 +99,12 @@
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-
-    span {
+    &:hover svg {
+        transform: translate(10%, -10%);
+    }
+    svg {
+        height: 1.3rem;
+        width: 1.3rem;
         color: var(--color-accent);
     }
 }
