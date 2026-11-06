@@ -24,7 +24,7 @@ type NativeButtonProps = ButtonBaseProps & {
 
 type ButtonProps = ButtonLinkProps | NativeButtonProps;
 
-function ArrowIcon() {
+export function ArrowIcon() {
     return (
         <svg
             className={styles.arrow}
