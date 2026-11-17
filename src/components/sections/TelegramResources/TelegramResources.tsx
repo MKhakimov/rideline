@@ -1,7 +1,6 @@
 import Container from "@/components/layout/Container/Container";
 import { telegramResources } from "@/data/telegramResources";
 import styles from "./TelegramResources.module.scss";
-import { ArrowIcon } from "@/components/ui/Button/Button";
 
 function ResourceAvatar({ type }: { type: "Канал" | "Группа" }) {
     if (type === "Группа") {
@@ -56,11 +55,6 @@ export default function TelegramResources() {
                                 <span className={styles.type}>{resource.type}</span>
                                 <span className={styles.description}>{resource.description}</span>
                             </span>
-
-                            {/* <span className={styles.arrow} aria-hidden="true">
-                                ↗
-                            </span> */}
-                            {/* <ArrowIcon /> */}
                         </a>
                     ))}
                 </div>
