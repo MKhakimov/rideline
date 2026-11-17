@@ -3,16 +3,16 @@ import "./globals.scss";
 import { Inter, Barlow_Condensed } from "next/font/google";
 
 const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-inter",
-  display: "swap",
+    subsets: ["latin", "cyrillic"],
+    variable: "--font-inter",
+    display: "swap",
 });
 
 const barlow = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-barlow",
-  display: "swap",
+    subsets: ["latin"],
+    weight: ["500", "600", "700"],
+    variable: "--font-barlow",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -35,10 +35,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html 
-            lang="ru"
-            className={`${inter.variable} ${barlow.variable}`}
-        >
+        <html lang="ru" className={`${inter.variable} ${barlow.variable}`}>
             <body>{children}</body>
         </html>
     );

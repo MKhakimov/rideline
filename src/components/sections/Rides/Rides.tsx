@@ -30,7 +30,7 @@ export default function Rides() {
                         />
                     ))}
                 </div>
-                
+
                 <div className={styles.actionBar}>
                     <Button href="/rides" variant="fill" showArrow>
                         Все поездки

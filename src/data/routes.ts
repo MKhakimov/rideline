@@ -101,7 +101,9 @@ async function readRoute(fileName: string): Promise<Route | null> {
 }
 
 export async function getRoutes(): Promise<Route[]> {
-    const files = (await readdir(routesDirectory)).filter((file) => file.toLowerCase().endsWith(".gpx"));
+    const files = (await readdir(routesDirectory)).filter((file) =>
+        file.toLowerCase().endsWith(".gpx"),
+    );
     const routes = await Promise.all(files.map(readRoute));
 
     return routes

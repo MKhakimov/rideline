@@ -139,7 +139,16 @@ export default function Header() {
                                                     )
                                                 }
                                             >
-                                                <svg fill="currentColor" className={styles.mobileSubmenuToggleIcon} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12.236.744a.788.788 0 0 1 .104 1.063l-.104.116L5.672 8l6.564 6.077a.788.788 0 0 1 .104 1.063l-.104.116a.955.955 0 0 1-1.148.096l-.124-.096-7.2-6.667a.788.788 0 0 1-.104-1.063l.104-.115 7.2-6.667a.952.952 0 0 1 1.272 0Z"></path></svg>
+                                                <svg
+                                                    fill="currentColor"
+                                                    className={styles.mobileSubmenuToggleIcon}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path d="M12.236.744a.788.788 0 0 1 .104 1.063l-.104.116L5.672 8l6.564 6.077a.788.788 0 0 1 .104 1.063l-.104.116a.955.955 0 0 1-1.148.096l-.124-.096-7.2-6.667a.788.788 0 0 1-.104-1.063l.104-.115 7.2-6.667a.952.952 0 0 1 1.272 0Z"></path>
+                                                </svg>
                                             </button>
                                         )}
                                     </div>

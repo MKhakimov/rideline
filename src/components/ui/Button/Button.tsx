@@ -28,25 +28,14 @@ type ButtonProps = ButtonLinkProps | NativeButtonProps;
 
 export function ArrowIcon() {
     return (
-        <svg
-            className={styles.arrow}
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-        >
+        <svg className={styles.arrow} aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
             <path d="m13.05 12.361-5.656 5.657-1.414-1.414 5.657-5.657-4.95-4.95H18v11.314z" />
         </svg>
     );
 }
 
 export default function Button(props: ButtonProps) {
-    const {
-        children,
-        className,
-        variant = "link",
-        size = "md",
-        showArrow = false,
-    } = props;
+    const { children, className, variant = "link", size = "md", showArrow = false } = props;
 
     const classNames = [styles.button, styles[variant], styles[size], className]
         .filter(Boolean)
@@ -62,11 +51,7 @@ export default function Button(props: ButtonProps) {
     }
 
     return (
-        <button
-            type={props.type ?? "button"}
-            className={classNames}
-            disabled={props.disabled}
-        >
+        <button type={props.type ?? "button"} className={classNames} disabled={props.disabled}>
             {children}
             {showArrow && <ArrowIcon />}
         </button>

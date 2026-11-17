@@ -12,9 +12,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <Container className={styles.container}>
-                <span className={styles.copyright}>
-                    RIDELINE © {new Date().getFullYear()}
-                </span>
+                <span className={styles.copyright}>RIDELINE © {new Date().getFullYear()}</span>
 
                 <nav className={styles.navigation} aria-label="Навигация в подвале сайта">
                     {footerLinks.map((link) => (

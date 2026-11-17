@@ -18,9 +18,7 @@ export default function Hero() {
             <div className={styles.overlay} />
 
             <Container className={styles.content}>
-                <span className={styles.eyebrow}>
-                    Культура горного велосипеда
-                </span>
+                <span className={styles.eyebrow}>Культура горного велосипеда</span>
 
                 <h1 className={styles.title}>
                     ИЩИ СВОЙ

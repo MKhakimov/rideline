@@ -15,18 +15,10 @@ export type ContentCardProps = {
     };
 };
 
-export default function ContentCard({
-    href,
-    media,
-    title,
-    details,
-    action,
-}: ContentCardProps) {
+export default function ContentCard({ href, media, title, details, action }: ContentCardProps) {
     const content = (
         <>
-            <span className={styles.imageFrame}>
-                {media}
-            </span>
+            <span className={styles.imageFrame}>{media}</span>
 
             <span className={styles.title}>{title}</span>
 
