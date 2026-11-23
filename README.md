@@ -1,14 +1,41 @@
 # RIDELINE
 
-A mountain bike culture website built with Next.js App Router.
+Платформа об outdoor-активностях в Узбекистане: маунтинбайк, хайкинг, маршруты, поездки и сообщество.
 
-## Project Structure
+## Стек
 
-- `src/app` — application pages, root layout, and global styles.
-- `src/components/layout` — layout components, including the header and container.
-- `src/components/sections` — page sections.
-- `src/styles` — variables, mixins, and reset styles.
+- Next.js (App Router), React, TypeScript (strict)
+- SCSS и CSS Modules
+- `motion` для анимаций
+- ESLint, Prettier
 
-## Routes
+## Требования
 
-Add `.gpx` files to `public/gpx/routes`. Titles and dates are read from GPX metadata; distance and SVG previews are generated automatically. The homepage shows the six newest routes by GPX date. Rebuild and redeploy to publish additions.
+- Node.js 20+
+- pnpm (версия зафиксирована в поле `packageManager` в `package.json`)
+
+## Команды
+
+| Команда             | Назначение                   |
+| ------------------- | ---------------------------- |
+| `pnpm install`      | Установка зависимостей       |
+| `pnpm dev`          | Сервер разработки            |
+| `pnpm build`        | Продакшн-сборка              |
+| `pnpm start`        | Запуск собранного приложения |
+| `pnpm lint`         | Проверка ESLint              |
+| `pnpm typecheck`    | Проверка типов               |
+| `pnpm format`       | Форматирование кода Prettier |
+| `pnpm format:check` | Проверка форматирования      |
+
+## Структура
+
+- `src/app` — страницы, корневой layout и глобальные стили.
+- `src/components/layout` — каркас: шапка, подвал, контейнер.
+- `src/components/sections` — секции страниц.
+- `src/components/cards`, `src/components/ui` — переиспользуемые компоненты.
+- `src/data` — данные контента.
+- `src/styles` — переменные, миксины и сброс стилей.
+
+## Маршруты
+
+GPX-файлы кладутся в `public/gpx/routes`. Название и дата берутся из метаданных GPX, дистанция и SVG-превью строятся автоматически. На главной показываются шесть самых новых маршрутов по дате из GPX. Чтобы новые маршруты появились на сайте, проект нужно пересобрать и задеплоить.
