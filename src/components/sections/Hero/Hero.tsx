@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "@/components/layout/Container/Container";
+import Button from "@/components/ui/Button/Button";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
@@ -17,24 +18,21 @@ export default function Hero() {
             <div className={styles.overlay} />
 
             <Container className={styles.content}>
-                <span className={styles.eyebrow}>
-                    Культура горного велосипеда
-                </span>
+                <span className={styles.eyebrow}>Культура горного велосипеда</span>
 
                 <h1 className={styles.title}>
-                    За
+                    ИЩИ СВОЙ
                     <br />
-                    пределами тропы<span>.</span>
+                    ПУТЬ
                 </h1>
 
                 <p className={styles.description}>
-                    Истории, маршруты и экипировка для тех,
-                    кто живёт скоростью и свободой.
+                    Горы, трейлы, экипировка и всё, что делает каждую поездку особенной.
                 </p>
 
-                <a href="/rides" className={styles.link}>
-                    Смотреть маршруты <span>↗</span>
-                </a>
+                <Button href="/routes" className={styles.link} variant="link" showArrow>
+                    Смотреть маршруты
+                </Button>
             </Container>
         </section>
     );

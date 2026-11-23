@@ -2,27 +2,27 @@
 @use "../styles/reset";
 
 html {
-  color-scheme: dark;
-  background: var(--color-bg);
+    color-scheme: dark;
+    background: var(--color-bg);
 }
 
 body {
-  color: var(--color-text);
-  background: var(--color-bg);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.5;
+    color: var(--color-text);
+    background: var(--color-bg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 ::selection {
-  color: var(--color-bg);
-  background: var(--color-accent);
+    color: var(--color-bg);
+    background: var(--color-accent);
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  text-transform: uppercase;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
 }
